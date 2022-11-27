@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.p-footer {
+  padding-bottom: rem(25);
+}
+
+.p-footer__inner {
+  text-align: center;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+}
+
+.p-footer__logo {
+  width: 100%;
+  max-width: rem(53);
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(md) {
+    max-width: rem(73);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.p-footer__items {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.p-footer__item a {
+  padding: rem(3) 0;
+  @include mq(md) {
+    padding: 0 rem(16);
+  }
+}
+
+.p-footer__copy {
+  font-size: rem(15);
+  text-align: center;
+  margin-top: rem(33);
+  @include mq(md) {
+    font-size: rem(11);
+    margin-top: rem(65);
+  }
+}

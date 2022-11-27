@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.c-btn {
+  display: block;
+  color: $white;
+  text-align: center;
+  font-size: rem(18);
+  background-color: $black;
+  border: 1px solid $white;
+  padding: rem(10);
+  @include mq(md) {
+    display: inline-block;
+  }
+}
