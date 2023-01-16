@@ -1,18 +1,19 @@
 @use "global" as *;
 
 /* 非表示設定 */
+//768px以上を表示
+.u-hidden-sp {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
 //モバイルのみ表示
-.u-sp {
+.u-hidden-pc {
   display: block;
   @include mq("md") {
     display: none;
   }
 }
 
-//768px以上を表示
-.u-pc {
-  display: none;
-  @include mq("md") {
-    display: block;
-  }
-}
