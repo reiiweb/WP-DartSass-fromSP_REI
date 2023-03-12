@@ -1,14 +1,22 @@
 @use "sass:math";
 
+// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
 ////////////////////
 // インナー幅設定
 ////////////////////
 // コンテンツのインナー幅（最も共通の幅が多い部分）
 $inner: 1280px;
 
+// full
+$full: 1440;
+
 // 余白
 $padding-pc: 25px;
-$padding-sp: 20px;
+$padding-sp: rem(20);
 
 
 ////////////////////
@@ -31,16 +39,6 @@ $bold: 700;
 
 $black: #000;
 $white: #fff;
-
-body {
-  color: $black;
-  background-color: $white;
-  font-family: $base-font-family;
-  font-weight: $normal;
-  font-size: rem(16);
-  line-height: 1.5;
-}
-
 
 ////////////////////
 // メディアクエリとブレークポイントの設定
@@ -70,9 +68,12 @@ $mediaquerys: (
   }
 }
 
-// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
-@function rem($pixels) {
-  @return math.div($pixels, 16) * 1rem;
+
+body {
+  line-height: 1.5;
+  color: $black;
+  background-color: $white;
+  font-family: $base-font-family;
+  font-weight: $normal;
+  font-size: rem(16);
 }
-
-

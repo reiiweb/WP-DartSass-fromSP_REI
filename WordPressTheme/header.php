@@ -12,6 +12,8 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
+  <div class="l-site-wrapper">
+
   <div class="l-inner">
     <p class="p-test">変更のテスト</p>
     <a href="<?php echo esc_url(home_url('/')); ?>" class="c-btn">ボタン</a>
